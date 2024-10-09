@@ -5,7 +5,15 @@
 //         name: '',
 //         email: '',
 //         password: ''
-    
+    // const [message, setMessage] = useState('');
+
+    // useEffect(() => {
+    //     fetch('') // Backend API endpoint
+    //         .then(response => response.json())
+    //         .then(data => setProfile(data))
+    //         .catch(error => console.error('Error fetching profile:', error));
+    // }, []);
+   
 //     });
 
 //     const handleChange = (e) => {
@@ -58,3 +66,5 @@
 // </div>
 //     );
 // };
+
+// export default UpdateProfile;
