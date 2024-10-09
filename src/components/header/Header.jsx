@@ -1,22 +1,23 @@
 import React from 'react';
 import './Header.css'; 
 
-const Header = () => {
+const Header = ({ onLogout }) => {
   return (
     <header className="header">
       <div className="logo">
-        <h1>PawPals</h1>
+        <h1>YourLogo</h1>
       </div>
       <nav className="nav">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><button className="nav-btn">Home</button></li>
+          <li><button className="nav-btn">About</button></li>
+          <li><button className="nav-btn">Services</button></li>
+          <li><button className="nav-btn">Contact</button></li>
         </ul>
       </nav>
+      <button className="logout-btn" onClick={onLogout}>Log Out</button>
     </header>
   );
-}
+};
 
 export default Header;
