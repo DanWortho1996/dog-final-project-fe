@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className="logo-container">
-        <img src="/src/assets/Instadog.png" alt="Instadog Logo" className="logo" />
+        <img src="/src/components/images/logo1.png" alt="logo1 Logo" className="logo1" />
       </div>
   )
 }
