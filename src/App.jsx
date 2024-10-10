@@ -5,7 +5,7 @@ import MenuPage from './pages/menuPage/MenuPage';
 // import ProfilePage from './pages/profilePage/ProfilePage';
 // import UserListPage from './pages/userListPage/UserListPage';
 import LandingPage from './pages/landingPage/LandingPage';
-import {browserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
   
