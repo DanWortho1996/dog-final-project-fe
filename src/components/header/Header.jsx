@@ -5,7 +5,10 @@ const Header = ({ onLogout }) => {
   return (
     <header className="header">
       <div className="logo">
-        <h1>YourLogo</h1>
+        <h1>PawPals</h1>
+        <div className="logo-container">
+        <img src="/src/components/images/logo1.png" alt="logo1 Logo" className="logo1" />
+      </div>
       </div>
       <nav className="nav">
         <ul>
