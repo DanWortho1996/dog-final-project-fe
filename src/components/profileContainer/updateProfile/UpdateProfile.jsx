@@ -1,70 +1,122 @@
-// import React, {useState} from 'react';
+import React, {useState} from 'react';
+import './UpdateProfile.css';
 
-// const UpdateProfile = () => {
-//     const [UpdateProfile, setUpdateProfile] = useState({
-//         name: '',
-//         email: '',
-//         password: ''
-    // const [message, setMessage] = useState('');
+function UpdateProfile() {
+    const [form1, setForm1] = useState({username: '', email: '', password: ''});
+    const [form2, setForm2] = useState({username: '', email: '', password: ''});
 
-    // useEffect(() => {
-    //     fetch('') // Backend API endpoint
-    //         .then(response => response.json())
-    //         .then(data => setProfile(data))
-    //         .catch(error => console.error('Error fetching profile:', error));
-    // }, []);
-   
-//     });
+    const handleForm1Change = (e) => {
+        const {name, value } = e.target;
+        setForm1({... form1, [name]: value});
+    };
 
-//     const handleChange = (e) => {
-//         setUpdateProfile({
-//             ...Profiler,
-//             [e.target.name]: e.target.value
-//         });
-//     };
+    const handleForm2Change = (e) => {
+        const { name, value } = e.target;
+        setForm2({...form2,[name]: value});
+    };
 
-//     const handleSubmit = (e) => {
-//         e.preventDefault();
-//         // Handle the save/update logic here(like sending data to a server)
-//         console.log("Updated Profile:", profile);
-//         alert('profile updated successfully!');
-//     };
+    const handleForm1Submit = (e) => {
+        e.preventDefault();
+        console.log('form 1 data:', form1);
+    };
 
-//     return (
-//         <div>
-//         <h2>Update Profile</h2>
-//         <form onSubmit={handleSubmit}>
-//         <div>
-//         <label>Name:</label>
-//         <input
-//         type="text"
-//         name="name"
-//         value={profile.name}
-//         onChange={handleChange}
-//         />
-//         </div>
-//         <div>
-//             <label>Email:</label>
-//             <input 
-//             type="email"
-//             name="email"
-//             value={profile.email}
-//             onChange={handleChange}
-//             />
-//         </div>
-//         <div>
-//             <label>Password:</label>
-//             <input
-//             type="password"
-//             name="pasword"
-//             value={profile.password}
-//             onChange={handleChange}
-//             />
-//         </div>
-//         <button type="submit">Save Changes</button>
-//         </form>
-// </div>
-//     );
-// };
+    const handleForm2Submit = (e) => {
+        e.preventDefault();
+        console.log('form 2 Data:', form2);
+    };
 
-// export default UpdateProfile;
+    return (
+        <div>
+          <h2></h2>
+    
+          {/* Flex container to hold both forms side by side */}
+          <div className="form-wrapper">
+            {/* Form 1 - Fill in Details */}
+            <div className="form-container">
+              <h3>Fill in Details</h3>
+              <form onSubmit={handleForm1Submit}>
+                <div className="form-row">
+                  <label>Username:</label>
+                  <input
+                    type="text"
+                    name="username"
+                    value={form1.username}
+                    onChange={handleForm1Change}
+                    required
+                    className="input-small"
+                  />
+                </div>
+                <div className="form-row">
+                  <label>Email:</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={form1.email}
+                    onChange={handleForm1Change}
+                    required
+                    className="input-small"
+                  />
+                </div>
+                <div className="form-row">
+                  <label>Password:</label>
+                  <input
+                    type="password"
+                    name="password"
+                    value={form1.password}
+                    onChange={handleForm1Change}
+                    required
+                    className="input-small"
+                  />
+                </div>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+    
+            {/* Form 2 - Update Information */}
+            <div className="form-container">
+              <h3>Update Information</h3>
+              <form onSubmit={handleForm2Submit}>
+                <div className="form-row">
+                  <label>Username:</label>
+                  <input
+                    type="text"
+                    name="username"
+                    value={form2.username}
+                    onChange={handleForm2Change}
+                    required
+                    className="input-small"
+                  />
+                </div>
+                <div className="form-row">
+                  <label>Email:</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={form2.email}
+                    onChange={handleForm2Change}
+                    required
+                    className="input-small"
+                  />
+                </div>
+                <div className="form-row">
+                  <label>Password:</label>
+                  <input
+                    type="password"
+                    name="password"
+                    value={form2.password}
+                    onChange={handleForm2Change}
+                    required
+                    className="input-small"
+                  />
+                </div>
+                <button type="submit">Update</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      );
+    }
+    
+    export default UpdateProfile;
+    
+    
