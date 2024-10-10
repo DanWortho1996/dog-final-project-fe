@@ -7,11 +7,9 @@ const Header = () => {
       <div className="logo-container">
         <img src="/src/components/images/logo1.png" alt="1ogo1" className="logo1" />
       </div>
-     
       <div className="search-bar">
         <input type="text" placeholder="Search PawPals..." />
       </div>
-     
       <div className="nav-icons">
         <span className="welcome-message">Welcome, User!</span>
         <a href="/home" className="icon-link">
