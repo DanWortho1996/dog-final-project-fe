@@ -1,7 +1,6 @@
 import './App.css';
 
-// import Header from './components/header/Header';
-// import Footer from './components/footer/Footer';
+import Layout from './components/layout/Layout'
 import MenuPage from './pages/menuPage/MenuPage';
 // import ProfilePage from './pages/profilePage/ProfilePage';
 // import UserListPage from './pages/userListPage/UserListPage';
@@ -10,12 +9,16 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 function App() {
   return (
-            <Router>
+           <Layout>
+             <Router>
               <Routes>
+              {/* <Route path="/" element={<ProfilePage/>} />
+              <Route path="/menu" element={<UserListPage />} /> */}
               <Route path="/" element={<LandingPage/>} />
               <Route path="/menu" element={<MenuPage />} />
               </Routes>
             </Router>
+           </Layout>
   )
 };
 
