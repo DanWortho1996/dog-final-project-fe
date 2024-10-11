@@ -5,13 +5,13 @@ import LandingPage from './pages/landingPage/LandingPage';
 // import ProfilePage from './pages/profilePage/ProfilePage';
 // import UserListPage from './pages/userListPage/UserListPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import UserListPage from './pages/userListPage/UserListPage';
 
 function App() {
 
   return (
     <Router>
       <Layout>
-        {/* Include the Header and pass the logout function */}
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/menu" element={<MenuPage />} />
