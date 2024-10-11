@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
  
-const Header = () => {
+const Header = ({ onLogout }) => {
   return (
     <header className="header">
       <div className="logo-container">
@@ -18,6 +18,7 @@ const Header = () => {
         <a href="/images" className="icon-link">
           <img src="../../../images/home.png" alt="Home" className="icon" />
         </a>
+        <button className="logout-btn" onClick={onLogout}>Log Out</button>
       </div>
     </header>
   );
