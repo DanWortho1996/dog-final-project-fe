@@ -55,6 +55,21 @@
   opacity: 0.8; 
 }
 
+.logout-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background-color: #ff1a1a;
+}
+
 /* .header {
   display: flex;
   justify-content: space-between;
