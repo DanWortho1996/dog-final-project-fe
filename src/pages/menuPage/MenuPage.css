@@ -1,0 +1,64 @@
+.MenuPage {
+    background-color: black;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.boxOne {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 5px solid rgb(3, 212, 3);
+    border-radius: 20px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.boxTwo {
+    height: 100px;
+    width: 100px;
+    background-color: purple;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 5px solid rgb(3, 212, 3);
+    border-radius: 20px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.boxThree {
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 5px solid rgb(3, 212, 3);
+    border-radius: 20px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.boxFour {
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 5px solid rgb(3, 212, 3);
+    border-radius: 20px;
+    text-align: center;
+    color: whitesmoke;
+}
