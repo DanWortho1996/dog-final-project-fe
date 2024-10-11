@@ -3,7 +3,7 @@ import Layout from './components/layout/Layout';
 import MenuPage from './pages/menuPage/MenuPage';
 import LandingPage from './pages/landingPage/LandingPage';
 // import ProfilePage from './pages/profilePage/ProfilePage';
-// import UserListPage from './pages/userListPage/UserListPage';
+import UserListPage from './pages/userListPage/UserListPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/menu" element={<MenuPage />} />
           {/* <Route path="/profile" element={<ProfilePage />} /> */}
-          {/* <Route path="/userlist" element={<UserListPage />} /> */}
+          <Route path="/userlist" element={<UserListPage />} />
         </Routes>
       </Layout>
     </Router>
