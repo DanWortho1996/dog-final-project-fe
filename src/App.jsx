@@ -7,17 +7,11 @@ import LandingPage from './pages/landingPage/LandingPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
-  const handleLogout = () => {
-    localStorage.removeItem('user');
-    window.location.href = '/login';
-  };
 
   return (
     <Router>
       <Layout>
         {/* Include the Header and pass the logout function */}
-        <Header onLogout={handleLogout} />
-
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/menu" element={<MenuPage />} />
