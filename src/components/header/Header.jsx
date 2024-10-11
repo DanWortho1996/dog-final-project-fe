@@ -1,7 +1,12 @@
 import React from 'react';
 import './Header.css';
  
-const Header = ({ onLogout }) => {
+const Header = () => {
+  const handleLogout = (e) => {
+    e.preventDefault()
+    console.log ("clicked")
+  };
+
   return (
     <header className="header">
       <div className="logo-container">
@@ -18,7 +23,7 @@ const Header = ({ onLogout }) => {
         <a href="/images" className="icon-link">
           <img src="../../../images/home.png" alt="Home" className="icon" />
         </a>
-        <button className="logout-btn" onClick={onLogout}>Log Out</button>
+        <button className="logout-btn" onClick={handleLogout}>Log Out</button>
       </div>
     </header>
   );
