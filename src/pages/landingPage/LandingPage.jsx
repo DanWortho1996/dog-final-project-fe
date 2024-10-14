@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import LogOrSign from '../../components/logOrSign/LogOrSign';
 
 const LandingPage = ({ isLoggedIn, loggedUser, setIsLoggedIn, setLoggedUser }) => {
@@ -7,6 +8,7 @@ const LandingPage = ({ isLoggedIn, loggedUser, setIsLoggedIn, setLoggedUser }) =
           setIsLoggedIn={setIsLoggedIn}
           setLoggedUser={setLoggedUser}
         />
+        <Outlet />
     </div>
   )
 };
