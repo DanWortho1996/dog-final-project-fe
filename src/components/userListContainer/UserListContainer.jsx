@@ -31,7 +31,7 @@ const UserListContainer = ({isLoggedIn}) => {
         <div className="userLContainer">
             <div className="inner-userLContainer">
                 {users.length >= 1 ? (
-                    users.map((user) => <p>{user.username}</p>)
+                    users.map((user) => <p key={user.id}>{user.username}</p>)
                 ) : (
                     <p>No Users</p>
                 )}
