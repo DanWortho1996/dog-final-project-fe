@@ -1,10 +1,8 @@
 import {useEffect, useState} from "react";
 
-import userListContainer from "./userListContainer/UserListContainer";
+import "./UserListContainer.css";
 
-import "./userListContainer.css";
-
-const UserContainer = ({isLoggedIn}) => {
+const UserListContainer = ({isLoggedIn}) => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
@@ -15,7 +13,7 @@ const UserContainer = ({isLoggedIn}) => {
         }
 
         fetchUsers();
-    }, [isLoggedIn]);
+    }, []);
 
     const testUseEffect = () => {
         console.log("useEffect in userlistcontainer is working");
@@ -33,7 +31,7 @@ const UserContainer = ({isLoggedIn}) => {
         <div className="userLContainer">
             <div className="inner-userLContainer">
                 {users.length >= 1? (
-                    users.map((user) => <userListContainer user={user} key={user.id}/>)
+                    users.map((user) => <p>{user.username}</p>)
                 ) : (
                     <p>No Users</p>
                 )}
@@ -42,4 +40,4 @@ const UserContainer = ({isLoggedIn}) => {
     );
 };
 
-export default UserContainer;
+export default UserListContainer;
