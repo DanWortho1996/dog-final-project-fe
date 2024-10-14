@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo-container">
-        <img src="../../../images/logo1.png" alt="1ogo1" className="logo1" />
+        <img src="../../../images/PawPals.png" alt="PawPals" className="PawPals" height = "121px"  />
       </div>
       <div className="search-bar">
         <input type="text" placeholder="Search PawPals..." />

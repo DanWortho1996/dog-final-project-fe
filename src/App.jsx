@@ -10,6 +10,7 @@ import UserListPage from './pages/userListPage/UserListPage';
 function App() {
 
   return (
+    <div className = "background-color" >
     <Router>
       <Layout>
         <Routes>
@@ -20,6 +21,7 @@ function App() {
         </Routes>
       </Layout>
     </Router>
+    </div>
   );
 }
 
