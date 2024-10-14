@@ -1,10 +1,11 @@
 export const allUsersFetch = async () => {
+    const baseURL = import.meta.env.VITE_BASE_URL;
     try {
-        const response = await fetch(`${import.meta.env.VITE_BASE_URL}/users/allusers`, {
+        const response = await fetch(`${baseURL}/users/allusers`, {
             method: "GET",
             mode: "cors",
             headers: {
-                "content-Type": "application/json",
+                "Content-Type": "application/json",
             },
         });
         if (!response.ok) {
