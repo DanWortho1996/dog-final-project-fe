@@ -14,7 +14,7 @@ const MenuPage = () => {
       <button className="boxFour">HELP</button>
     </div>
     <div className="dog-breeds-container">
-    <DogBreedsMenu />  {/* Adding the new component centered below existing buttons */}
+    <DogBreedsMenu />  
   </div>
 </div>
   )

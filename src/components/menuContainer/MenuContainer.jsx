@@ -4,7 +4,7 @@ import '../../pages/menuPage/MenuPage.css';
 const DogBreedsMenu = () => {
     const [dogImage, setDogImage] = useState('');
     const [loading, setLoading] = useState(true);
-    const [animate, setAnimate] = useState(false); // State to handle animation
+    const [animate, setAnimate] = useState(false); 
   
     useEffect(() => {
       fetchDogImage();
@@ -16,11 +16,11 @@ const DogBreedsMenu = () => {
         const response = await fetch('https://api.thedogapi.com/v1/images/search?size=med&mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=0&limit=1');
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
-        console.log('API Response:', data); // Log the API response
+        console.log('API Response:', data); 
         if (data && data.length > 0) {
           const dogData = data[0];
           setDogImage(dogData.url);
-          setAnimate(false); // Reset animation
+          setAnimate(false); 
         } else {
           console.error('No dog image data available.');
         }
@@ -32,8 +32,8 @@ const DogBreedsMenu = () => {
     };
   
     const handleRandomize = () => {
-      setAnimate(true); // Trigger animation
-      setTimeout(fetchDogImage, 500); // Delay fetching a new image to allow animation to complete
+      setAnimate(true); 
+      setTimeout(fetchDogImage, 500); 
     };
   
     return (
