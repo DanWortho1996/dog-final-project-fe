@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-
+import { allUsersFetch } from "../../utils/fetch";
 import "./UserListContainer.css";
 
 const UserListContainer = ({isLoggedIn}) => {
@@ -30,7 +30,7 @@ const UserListContainer = ({isLoggedIn}) => {
     return (
         <div className="userLContainer">
             <div className="inner-userLContainer">
-                {users.length >= 1? (
+                {users.length >= 1 ? (
                     users.map((user) => <p>{user.username}</p>)
                 ) : (
                     <p>No Users</p>
