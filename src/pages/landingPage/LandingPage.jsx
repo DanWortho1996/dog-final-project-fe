@@ -1,4 +1,3 @@
-import React from 'react';
 import LogOrSign from '../../components/logOrSign/LogOrSign';
 
 const LandingPage = ({ isLoggedIn, loggedUser, setIsLoggedIn, setLoggedUser }) => {
@@ -10,6 +9,7 @@ const LandingPage = ({ isLoggedIn, loggedUser, setIsLoggedIn, setLoggedUser }) =
         />
     </div>
   )
-}
+};
 
 export default LandingPage;
+
