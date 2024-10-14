@@ -62,3 +62,9 @@
     text-align: center;
     color: whitesmoke;
 }
+
+.dog-breeds-container {
+    display: flex;
+    justify-content: center; /* Centers the DogBreedsMenu component */
+  }
+
