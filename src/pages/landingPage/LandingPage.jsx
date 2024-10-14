@@ -1,7 +1,15 @@
-const LandingPage = () => {
+import LogOrSign from '../../components/logOrSign/LogOrSign';
+
+const LandingPage = ({ isLoggedIn, loggedUser, setIsLoggedIn, setLoggedUser }) => {
   return (
-    <p>Landing Page</p>
+    <div>
+        <LogOrSign
+          setIsLoggedIn={setIsLoggedIn}
+          setLoggedUser={setLoggedUser}
+        />
+    </div>
   )
 };
 
 export default LandingPage;
+
