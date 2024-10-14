@@ -1,12 +1,17 @@
 import { Outlet } from "react-router-dom";
+import LogOrSign from '../../components/logOrSign/LogOrSign';
 
-const LandingPage = () => {
+const LandingPage = ({ isLoggedIn, loggedUser, setIsLoggedIn, setLoggedUser }) => {
   return (
-    <>
-    <p>Landing Page</p>
-    <Outlet />
-    </>
+    <div>
+        <LogOrSign
+          setIsLoggedIn={setIsLoggedIn}
+          setLoggedUser={setLoggedUser}
+        />
+        <Outlet />
+    </div>
   )
 };
 
 export default LandingPage;
+
