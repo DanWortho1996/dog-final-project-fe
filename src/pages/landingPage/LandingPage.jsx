@@ -1,9 +1,13 @@
 import React from 'react'
+import {Link, Outlet} from 'react-router-dom';
 
 const LandingPage = () => {
   return (
-    <div>LandingPage</div>
+    <>
+    <Link to="/menu">Menu</Link>
+    <Outlet />
+    </>
   )
-}
+};
 
-export default LandingPage
+export default LandingPage;
