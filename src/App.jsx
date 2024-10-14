@@ -7,6 +7,7 @@ import MenuPage from './pages/menuPage/MenuPage';
 import LandingPage from './pages/landingPage/LandingPage';
 import ProfilePage from './pages/profilePage/ProfilePage';
 import UserListPage from './pages/userListPage/UserListPage';
+import DogEventsPage from './pages/dogEventPage/DogEventsPage';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
                 <Route path="/menu" element={<MenuPage />} />     
                 <Route path="/profilepage" element={<ProfilePage/>} />
                 <Route path="/activeusers" element={<UserListPage />} />
+                <Route path="/dogevents" element={<DogEventsPage />} />
+
               </Routes>
             </Layout>
            </Router>

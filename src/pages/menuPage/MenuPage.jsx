@@ -8,10 +8,10 @@ const MenuPage = () => {
   return (
     <div>
     <div className="box-container">
-      <button className="boxOne" onClick={() => navigate("/userlist")}>Active Users</button>
-      <button className="boxTwo">Dog Events</button>
-      <button className="boxThree">Update Profile</button>
-      <button className="boxFour">HELP</button>
+      <button className="boxOne" onClick={() => navigate("/activeusers")}>Active Users</button>
+      <button className="boxTwo" onClick={() => navigate("/dogevents")}>Dog Events</button>
+      <button className="boxThree" onClick={() => navigate("/profilepage")}>Update Profile</button>
+      {/* <button className="boxFour" onClick={() => navigate("/help")}>HELP</button> */}
     </div>
     <div className="dog-breeds-container">
     <DogBreedsMenu />  
