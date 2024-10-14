@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { signupFetch } from "../../../utils/fetch";
 import "./Signup.css";
 
@@ -7,6 +8,8 @@ const Signup = ({ setLoggedUser, setIsLoggedIn }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] =useState("");
+
+  const navigate = useNavigate();
 
 const handleChange = (e, setter) => {
   console.log (e.target.value)
@@ -25,6 +28,7 @@ const handleSubmit = async (e) => {
     setLoggedUser(data);
     // setIsLoggedIn
     setIsLoggedIn(true);
+    navigate("/menu");
   }
 }
 

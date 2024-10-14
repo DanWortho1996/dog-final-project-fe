@@ -13,18 +13,18 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loggedUser, setLoggedUser] = useState(false);
   return (
-           <Layout>
-             <Router>
+           <Router>
+             <Layout>
               <Routes>
               {/*  /<Route path="/" element={<ProfilePage/>}>
               <Route path="/menu" element={<UserListPage />} /> */}
               <Route path="/" element={<LandingPage setIsLoggedIn={setIsLoggedIn} setLoggedUser={setLoggedUser}/>} />
-                <Route path="menu" element={<MenuPage />} />     
-                <Route path="profilepage" element={<ProfilePage/>} />
-                <Route path="activeusers" element={<UserListPage />} />
+                <Route path="/menu" element={<MenuPage />} />     
+                <Route path="/profilepage" element={<ProfilePage/>} />
+                <Route path="/activeusers" element={<UserListPage />} />
               </Routes>
-            </Router>
-           </Layout>
+            </Layout>
+           </Router>
   )
 };
 
