@@ -1,6 +1,6 @@
 export const allUsersFetch = async () => {
     try {
-        const response = await fetch("http://localhost:5001/.netlify/functions/api/users/allusers", {
+        const response = await fetch(`${import.meta.env.VITE_BASE_URL}/users/allusers`, {
             method: "GET",
             mode: "cors",
             headers: {
