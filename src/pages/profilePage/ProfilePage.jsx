@@ -1,8 +1,8 @@
-import React from 'react'
+import ProfileContainer from "../../components/profileContainer/ProfileContainer";
 
 const ProfilePage = () => {
   return (
-    <div>ProfilePage</div>
+    <ProfileContainer/>
   )
 }
 
