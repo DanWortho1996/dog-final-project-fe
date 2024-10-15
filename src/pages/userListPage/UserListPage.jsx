@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import UserListContainer from '../../components/userListContainer/UserListContainer';
 
 const UserListPage = () => {
   const [users, setUsers] = useState([]);
@@ -43,18 +44,8 @@ const UserListPage = () => {
   };
 
   return (
-    <div>
-      <h1>User List</h1>
-      <ul>
-        {users.map((user) => (
-          <li key={user._id}>
-            {user.username} - {user.email}
-            <button onClick={() => handleDeleteUser(user._id)} className="delete-btn">Delete</button>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+    <UserListContainer />
+  )
+}
 
 export default UserListPage;

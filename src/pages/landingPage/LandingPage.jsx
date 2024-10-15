@@ -1,9 +1,16 @@
-import React from 'react'
+// import { Outlet } from "react-router-dom";
+import LogOrSign from '../../components/logOrSign/LogOrSign';
 
-const LandingPage = () => {
+const LandingPage = ({ isLoggedIn, loggedUser, setIsLoggedIn, setLoggedUser }) => {
   return (
-    <div>LandingPage</div>
+    <div>
+        <LogOrSign
+          setIsLoggedIn={setIsLoggedIn}
+          setLoggedUser={setLoggedUser}
+        />
+    </div>
   )
-}
+};
 
-export default LandingPage
+export default LandingPage;
+

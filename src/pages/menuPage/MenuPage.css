@@ -1,0 +1,152 @@
+.MenuPage {
+    background-color: black;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.boxOne {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 5px solid rgb(3, 212, 3);
+    border-radius: 20px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.boxTwo {
+    height: 100px;
+    width: 100px;
+    background-color: purple;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 5px solid rgb(3, 212, 3);
+    border-radius: 20px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.boxThree {
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 5px solid rgb(3, 212, 3);
+    border-radius: 20px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.boxFour {
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 5px solid rgb(3, 212, 3);
+    border-radius: 20px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.dog-breeds-container {
+    display: flex;
+    justify-content: center; /* Centers the DogBreedsMenu component */
+  }
+
+/* MenuPage api css */
+
+.box-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px; 
+  }
+  
+  .dog-breeds-container {
+    display: flex;
+    justify-content: center;
+    background-color:salmon;
+  }
+  
+  .dog-container {
+    text-align: center;
+  }
+  
+  .dog-image-wrapper {
+    display: flex;
+    justify-content: center; 
+  }
+  
+  .dog-image-container {
+    display: inline-block;
+    position: relative; 
+  }
+  
+  .dog-image {
+    width: 400px;
+    height: auto;
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.2s ease-in-out; 
+    margin-bottom: 20px; 
+    background: radial-gradient(circle, #ffecd2, #fcb69f); /* Gradient background from center outwards */
+    padding: 10px;
+  }
+  
+  .dog-image:hover {
+    transform: scale(1.05); 
+  }
+  
+  .bounce-out {
+    animation: bounce-out 0.5s forwards; 
+  }
+  
+  @keyframes bounce-out {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(50%);
+    }
+    100% {
+      transform: translateX(200%);
+    }
+  }
+  
+  .randomize-button {
+    background-color:khaki; 
+    color: olivedrab; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-family: 'Arial', sans-serif; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    margin-bottom: 20px; 
+  }
+  
+  .randomize-button:hover {
+    background-color: #0056b3; 
+    transform: scale(1.1); 
+  }
+  
+  .randomize-button:active {
+    transform: scale(0.95); 
+  }
+
+ 
