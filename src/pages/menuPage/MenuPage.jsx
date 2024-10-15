@@ -6,7 +6,7 @@ import DogBreedsMenu from '../../components/menuContainer/MenuContainer';
 const MenuPage = () => {
   const navigate = useNavigate();
   return (
-    <div>
+    <div className="menuWrapper">
     <div className="box-container">
       <button className="boxOne" onClick={() => navigate("/activeusers")}>Active Users</button>
       <button className="boxTwo" onClick={() => navigate("/dogevents")}>Dog Events</button>
