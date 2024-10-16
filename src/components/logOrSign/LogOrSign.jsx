@@ -9,8 +9,9 @@ import "./LogOrSign.css";
 
 const LogOrSign = ({setIsLoggedIn, setLoggedUser}) => {
   return (
-    <div><div>
-        {/* <Login setLoggedUser={setLoggedUser} setIsLoggedIn={setIsLoggedIn}/> */}
+    <div>
+      <div>
+        <Login setLoggedUser={setLoggedUser} setIsLoggedIn={setIsLoggedIn}/>
         <Signup setLoggedUser={setLoggedUser} setIsLoggedIn={setIsLoggedIn}/>
       </div>
     </div>
