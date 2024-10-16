@@ -9,6 +9,7 @@ const LandingPage = ({ isLoggedIn, loggedUser, setIsLoggedIn, setLoggedUser }) =
           setLoggedUser={setLoggedUser}
         />
     </div>
+
   )
 };
 
