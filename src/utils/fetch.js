@@ -50,7 +50,7 @@ export const allUsersFetch = async () => {
     }
 };
 
-export const deleteUserFetch = async (username) => {
+export const deleteUser = async (username) => {
   const baseURL = import.meta.env.VITE_BASE_URL;
   try {
     const response = await fetch(`${baseURL}/users/delete`, {
