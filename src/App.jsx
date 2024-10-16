@@ -1,6 +1,6 @@
 import './App.css';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Layout from './components/layout/Layout'
 import MenuPage from './pages/menuPage/MenuPage';
@@ -13,6 +13,14 @@ import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loggedUser, setLoggedUser] = useState(false);
+  useEffect(()=>{
+    async function test(){
+      const response = await fetch (`${import.meta.env.VITE_BASE_URL}/health`)
+      const data =await response.json()
+      console.log("health", data)
+    }
+    test()
+  },[])
   return (
            <Router>
              <Layout>
