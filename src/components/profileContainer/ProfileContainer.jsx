@@ -1,12 +1,12 @@
 import ProfileDelete from "./profileDelete/ProfileDelete"
-import UpdateProfile from "./updateProfile/UpdateProfile"
 import ProfileDisplay from "./profileDisplay/ProfileDisplay"
+import UpdateProfile from "./updateprofile/Updateprofile"
 
 const ProfileContainer = () => {
   return (
     <div>
         <div>
-            <UpdateProfile/>
+            <UpdateProfile />
             <ProfileDelete/>
         </div>
             <ProfileDisplay/>
