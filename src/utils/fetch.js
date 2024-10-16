@@ -50,3 +50,33 @@ export const allUsersFetch = async () => {
     }
 };
 
+
+export const loginFetch = async (username, password) => {
+  try {
+    const response = await fetch(`${import.meta.env.VITE_BASE_URL}/users/login`, {
+      method: "POST", 
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: username,
+        password: password,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Login failed: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    console.log("data in loginFetch:", data);
+
+    return data;
+
+  } catch (error) {
+    console.log(error);
+    alert("ERROR! PLEASE check the console.");
+  }
+};
+
