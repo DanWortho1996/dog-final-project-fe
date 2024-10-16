@@ -15,7 +15,13 @@ function App() {
   const [loggedUser, setLoggedUser] = useState(false);
   useEffect(()=>{
     async function test(){
-      const response = await fetch (`${import.meta.env.VITE_BASE_URL}/health`)
+      const response = await fetch (`${import.meta.env.VITE_BASE_URL}/health`, {
+        method: "GET",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "application/json",
+            }
+      })
       const data =await response.json()
       console.log("health", data)
     }
