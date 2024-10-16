@@ -3,7 +3,7 @@ export const signupFetch = async (username, email, password) => {
     try {
       const response = await fetch(`${import.meta.env.VITE_BASE_URL}/users/signup`, {
         method: "POST", 
-        mode: "no-cors",
+        mode: "cors",
         headers: {
           "Content-Type": "application/json",
         },
@@ -34,7 +34,7 @@ export const allUsersFetch = async () => {
     try {
         const response = await fetch(`${baseURL}/users/allusers`, {
             method: "GET",
-            mode: "no-cors",
+            mode: "cors",
             headers: {
                 "Content-Type": "application/json",
             },
@@ -61,7 +61,8 @@ export const deleteUser = async (username) => {
       },
       body: JSON.stringify({username}),
     });
-    return !response.ok;
+    const data = await response.json ()
+    return data
   } catch (error) {
     console.error('Error deleting user:', error.message);
     throw error;
