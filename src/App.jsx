@@ -14,10 +14,11 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loggedUser, setLoggedUser] = useState(false);
   useEffect(()=>{
+    console.log("useeffect")
     async function test(){
       const response = await fetch (`${import.meta.env.VITE_BASE_URL}/health`, {
         method: "GET",
-            mode: "no-cors",
+            mode: "cors",
             headers: {
                 "Content-Type": "application/json",
             }
