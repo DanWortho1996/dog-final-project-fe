@@ -1,5 +1,7 @@
 import './App.css';
+
 import { useState } from 'react';
+
 import Layout from './components/layout/Layout'
 import MenuPage from './pages/menuPage/MenuPage';
 import LandingPage from './pages/landingPage/LandingPage';
@@ -12,7 +14,9 @@ import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loggedUser, setLoggedUser] = useState(false);
+
   console.log("!!!!!!!!!!!!!!", loggedUser)
+  
   return (
            <Router>
              <Layout>
