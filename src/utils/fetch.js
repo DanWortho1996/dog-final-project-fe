@@ -80,3 +80,21 @@ export const loginFetch = async (username, password) => {
   }
 };
 
+
+export const deleteUser = async (username) => {
+  const baseURL = import.meta.env.VITE_BASE_URL;
+  try {
+    const response = await fetch(`${baseURL}/users/delete`, {
+      method: 'DELETE',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({username}),
+    });
+    return !response.ok;
+  } catch (error) {
+    console.error('Error deleting user:', error.message);
+    throw error;
+  }
+};
