@@ -3,15 +3,15 @@ import ProfileDelete from "./profileDelete/ProfileDelete"
 import UpdateProfile from "./updateProfile/UpdateProfile"
 import ProfileDisplay from "./profileDisplay/ProfileDisplay"
 
-const ProfileContainer = () => {
+const ProfileContainer = ({ isLoggedIn, loggedUser, setIsLoggedIn, setLoggedUser }) => {
   return (
     <div className="profile-container">
-      <Routes>
-        <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/profile/delete" element={<ProfileDelete />} />
-      </Routes>
+
       <UpdateProfile/>
+      <ProfileDelete loggedUser={loggedUser} setIsLoggedIn={setIsLoggedIn} setLoggedUser={setLoggedUser}/>
+            <div>
             <ProfileDisplay/>
+            </div>
     </div>
   )
 }

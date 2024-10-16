@@ -61,7 +61,8 @@ export const deleteUser = async (username) => {
       },
       body: JSON.stringify({username}),
     });
-    return !response.ok;
+    const data = await response.json ()
+    return data
   } catch (error) {
     console.error('Error deleting user:', error.message);
     throw error;

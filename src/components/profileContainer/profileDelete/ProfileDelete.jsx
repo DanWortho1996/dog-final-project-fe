@@ -2,30 +2,17 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { deleteUser } from '/src/utils/fetch'; 
 
-const ProfileDelete = () => {
-  const [isDeleted, setIsDeleted] = useState(false);
+const ProfileDelete = ({ isLoggedIn, loggedUser, setIsLoggedIn, setLoggedUser }) => {
   const navigate = useNavigate();
 
   const handleDelete = async (e) => {
     e.preventDefault();
-    const confirmed = window.confirm('Are you sure you want to delete your account? This action is irreversible.');
-
-    if (confirmed) {
-      try {
-        const response = await deleteUser(); 
-        if (response.ok) {
-          setIsDeleted(true);
-          localStorage.removeItem('user');  
-          alert('Account deleted successfully.');
-          navigate('/');  
-        } else {
-          alert('Failed to delete account.');
-        }
-      } catch (error) {
-        console.error('Error deleting account:', error);
-      }
-    }
-  };
+   
+        const response = await deleteUser(loggedUser.user.username); 
+              setIsLoggedIn (false)
+              setLoggedUser (false)
+              navigate ("/")
+  }
 
   return (
     <div className="profile-delete">
