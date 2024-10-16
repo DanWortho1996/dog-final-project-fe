@@ -1,6 +1,6 @@
 import './App.css';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Layout from './components/layout/Layout'
 import MenuPage from './pages/menuPage/MenuPage';
