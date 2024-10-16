@@ -3,7 +3,7 @@ export const signupFetch = async (username, email, password) => {
     try {
       const response = await fetch(`${import.meta.env.VITE_BASE_URL}/users/signup`, {
         method: "POST", 
-        mode: "cors",
+        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
         },
@@ -34,7 +34,7 @@ export const allUsersFetch = async () => {
     try {
         const response = await fetch(`${baseURL}/users/allusers`, {
             method: "GET",
-            mode: "cors",
+            mode: "no-cors",
             headers: {
                 "Content-Type": "application/json",
             },
