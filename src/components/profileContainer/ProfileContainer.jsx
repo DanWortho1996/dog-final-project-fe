@@ -10,7 +10,7 @@ const ProfileContainer = ({ isLoggedIn, loggedUser, setIsLoggedIn, setLoggedUser
       <UpdateProfile/>
       <ProfileDelete loggedUser={loggedUser} setIsLoggedIn={setIsLoggedIn} setLoggedUser={setLoggedUser}/>
             <div>
-            <ProfileDisplay/>
+            <ProfileDisplay loggedUser={loggedUser}/>
             </div>
     </div>
   )
