@@ -6,6 +6,7 @@ const UserListContainer = ({isLoggedIn}) => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
+        console.log("useEffect in UserListContainer");
         async function fetchUsers() {
             const data = await allUsersFetch();
             console.log(data);

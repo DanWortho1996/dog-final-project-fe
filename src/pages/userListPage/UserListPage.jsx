@@ -1,5 +1,6 @@
-import React from 'react';
+import {useEffect, useState} from 'react';
 import UserListContainer from '../../components/userListContainer/UserListContainer';
+import { allUsersFetch } from '../../utils/fetch';
 
 const UserListPage = () => {
   const [users, setUsers] = useState([]);
@@ -10,7 +11,7 @@ const UserListPage = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch('/api/users');
+      const response = await fetch();
       const data = await response.json();
       setUsers(data);
     } catch (error) {
