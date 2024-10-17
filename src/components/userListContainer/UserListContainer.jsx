@@ -19,10 +19,10 @@ const UserListContainer = ({isLoggedIn}) => {
     return (
         <div className="userLContainer">
             <div className="inner-userLContainer">
-                <p>Hello</p>
+                <p>Active Users</p>
                 {users.length >= 1 ? (
                     users.map((user) => (
-                        <div key={user.id}>
+                        <div className="userCard" key={user.id}>
                             <p>{user.username}</p>
                             {user.dogs.length < 1 ? null : <p>{user.dogs[0].dogName}</p>}
                         </div>
