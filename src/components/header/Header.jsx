@@ -1,10 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Header.css';
  
 const Header = () => {
+  const navigate = useNavigate();
   const handleLogout = (e) => {
     e.preventDefault()
     console.log ("clicked")
+    navigate('/'); 
   };
 
   return (
