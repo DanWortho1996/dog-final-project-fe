@@ -2,8 +2,22 @@
     width: 80%;
     margin: 0 auto;
     text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   
+.boxcontainer{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  flex-direction: row;
+  padding:10px;
+  height: 15vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}  
+
   .header {
     background-color: #4CAF50;
     color: white;
@@ -14,8 +28,13 @@
   .ad-box {
     border: 1px solid #ccc;
     padding: 20px;
-    margin: 20px 0;
-    text-align: left;
+    margin: 10px;
+    text-align: center;
+    justify-content: center;
+    flex: 1 0 30%;
+    box-sizing: border-box;
+    
+
   }
   
   .ad-placeholder {
@@ -23,7 +42,7 @@
     height: 200px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     font-size: 18px;
     color: #aaa;
   }
