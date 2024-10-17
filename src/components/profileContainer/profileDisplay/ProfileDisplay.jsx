@@ -1,8 +1,12 @@
 import React from 'react'
 
-const ProfileDisplay = () => {
+const ProfileDisplay = ({loggedUser}) => {
   return (
-    <div>ProfileDisplay</div>
+    <div>
+      <h3>Your details</h3>
+      <p>Username: {loggedUser.user.username}</p>
+      <p>Email: {loggedUser.user.email}</p>
+       </div>
   )
 }
 
