@@ -6,6 +6,7 @@ const UserListContainer = ({isLoggedIn}) => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
+        console.log("useEffect in UserListContainer");
         async function fetchUsers() {
             const data = await allUsersFetch();
             console.log(data);
@@ -14,24 +15,18 @@ const UserListContainer = ({isLoggedIn}) => {
 
         fetchUsers();
     }, []);
-
-    const testUseEffect = () => {
-        console.log("useEffect in userlistcontainer is working");
-        return {
-            users: [
-                {id: 1, username: "dave"},
-                {id: 2, username: "jess"},
-                {id: 3, username: "andy"},
-                {id: 4, username: "gill"},
-            ],
-        };
-    };
     
     return (
         <div className="userLContainer">
             <div className="inner-userLContainer">
+                <p>Hello</p>
                 {users.length >= 1 ? (
-                    users.map((user) => <p key={user.id}>{user.username}</p>)
+                    users.map((user) => (
+                        <div key={user.id}>
+                            <p>{user.username}</p>
+                            {user.dogs.length < 1 ? null : <p>{user.dogs[0].dogName}</p>}
+                        </div>
+                    ))
                 ) : (
                     <p>No Users</p>
                 )}
