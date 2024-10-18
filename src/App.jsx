@@ -9,7 +9,7 @@ import ProfilePage from './pages/profilePage/ProfilePage';
 import UserListPage from './pages/userListPage/UserListPage';
 import DogEventsPage from './pages/dogEventPage/DogEventsPage';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import UpdateProfile from './components/profileContainer/updateprofile/Updateprofile';
+
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -28,7 +28,6 @@ function App() {
                 
                 <Route path="/activeusers" element={<UserListPage />} />
                 <Route path="/dogevents" element={<DogEventsPage />} />
-                <Route path="/updateprofile" element={<UpdateProfile/>} />
               </Routes>
             </Layout>
            </Router>
