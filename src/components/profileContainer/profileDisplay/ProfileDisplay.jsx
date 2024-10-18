@@ -1,4 +1,5 @@
 import React from 'react'
+import './ProfileDisplay.css'
 
 const ProfileDisplay = ({loggedUser}) => {
   return (
