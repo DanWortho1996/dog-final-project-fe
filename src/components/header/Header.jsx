@@ -1,16 +1,19 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Header.css';
  
 const Header = () => {
+  const navigate = useNavigate();
   const handleLogout = (e) => {
     e.preventDefault()
     console.log ("clicked")
+    navigate('/'); 
   };
 
   return (
     <header className="header">
       <div className="logo-container">
-        <img src="../../../images/logo1.png" alt="1ogo1" className="logo1" />
+        <img src="../../../images/one.png" alt="one" className="one" />
       </div>
       <div className="search-bar">
         <input type="text" placeholder="Search PawPals..." />

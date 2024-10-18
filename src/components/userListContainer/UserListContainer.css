@@ -1,5 +1,30 @@
-.inner-userLContainer {
+.userLContainer {
+    display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap;
-};
+    text-align: center;
+    width: 100%;
+    color: black;
+    padding-left: 0.65%;
+}
+
+.inner-userLContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid gold;
+    width: 30%;
+}
+
+.userCard {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid green;
+}

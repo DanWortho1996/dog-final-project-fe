@@ -1,0 +1,16 @@
+.profile-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 500px;
+  }
+  
+  .profile-details p {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  strong {
+    color: #333;
+  }
