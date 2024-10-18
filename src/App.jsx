@@ -44,7 +44,7 @@ function App() {
               <Route path="/menu" element={<UserListPage />} /> */}
               <Route path="/" element={<LandingPage setIsLoggedIn={setIsLoggedIn} setLoggedUser={setLoggedUser}/>} />
                 <Route path="/menu" element={<MenuPage />} />     
-                <Route path="/profilepage" element={<ProfilePage loggedUser={loggedUser} setIsLoggedIn={setIsLoggedIn} setLoggedUser={setLoggedUser}/>} /
+                <Route path="/profilepage" element={<ProfilePage loggedUser={loggedUser} setIsLoggedIn={setIsLoggedIn} setLoggedUser={setLoggedUser}/>} />
                 <Route path="/activeusers" element={<UserListPage />} />
                 <Route path="/dogevents" element={<DogEventsPage />} />
                 <Route path="/updateprofile" element={<UpdateProfile/>} />
