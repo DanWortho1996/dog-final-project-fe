@@ -4,7 +4,6 @@ import React from 'react';
 
 const ProfilePage = ({ isLoggedIn, loggedUser, setIsLoggedIn, setLoggedUser }) => {
 
-
   return (
     <div className="profile-delete">
       
@@ -12,6 +11,5 @@ const ProfilePage = ({ isLoggedIn, loggedUser, setIsLoggedIn, setLoggedUser }) =
     </div>
   );
 };
-
 
 export default ProfilePage;

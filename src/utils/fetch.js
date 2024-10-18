@@ -51,6 +51,32 @@ export const allUsersFetch = async () => {
 };
 
 
+export const updateUserFetch = async (username, newEmail) => {
+  const baseURL = import.meta.env.VITE_BASE_URL;
+  try{
+    const response = await fetch(`${baseURL}/users/updateuser`, {
+      method: "PUT",
+      mode: "cors",
+      headers: {
+          "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: username,
+        newEmail: newEmail, 
+        
+      }),
+  });
+  if (!response.ok) {
+      console.log("error");
+  }
+  const data = await response.json();
+  console.log("updateuser", data);
+  return data;
+} catch (error) {
+  console.log("Error:", error);
+}
+  };
+
 export const loginFetch = async (username, password) => {
   try {
     const response = await fetch(`${import.meta.env.VITE_BASE_URL}/users/login`, {
@@ -99,3 +125,4 @@ export const deleteUser = async (username) => {
     throw error;
   }
 };
+

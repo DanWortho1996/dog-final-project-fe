@@ -1,7 +1,7 @@
 import { Route, Routes} from 'react-router-dom'
 import ProfileDelete from "./profileDelete/ProfileDelete"
-import UpdateProfile from "./updateProfile/UpdateProfile"
 import ProfileDisplay from "./profileDisplay/ProfileDisplay"
+import UpdateProfile from './updateProfile/UpdateProfile'
 
 const ProfileContainer = ({ isLoggedIn, loggedUser, setIsLoggedIn, setLoggedUser }) => {
   return (
