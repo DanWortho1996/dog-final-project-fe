@@ -15,6 +15,7 @@ const Header = () => {
       <div className="logo-container">
         <img src="../../../images/one.png" alt="one" className="one" />
       </div>
+      <button className="menuButton" onClick={() => navigate("/menu")}>MENU</button>
       <div className="search-bar">
         <input type="text" placeholder="Search PawPals..." />
       </div>
