@@ -1,16 +1,15 @@
 import ProfileContainer from "../../components/profileContainer/ProfileContainer";
+import React from 'react';
 
-const ProfilePage = ({ setLoggedUser,loggedUser}) => {
-  console.log(" profile page hit")
+
+const ProfilePage = ({ isLoggedIn, loggedUser, setIsLoggedIn, setLoggedUser }) => {
+
   return (
-    <div>
-      <ProfileContainer
-      setLoggedUser={setLoggedUser}
-      loggedUser={loggedUser}
-      />
+    <div className="profile-delete">
+      
+      <ProfileContainer loggedUser={loggedUser} setIsLoggedIn={setIsLoggedIn} setLoggedUser={setLoggedUser}/>
     </div>
-  
-  )
-}
+  );
+};
 
 export default ProfilePage;
