@@ -7,7 +7,7 @@ const ProfileContainer = ({ isLoggedIn, loggedUser, setIsLoggedIn, setLoggedUser
   return (
     <div className="profile-container">
 
-      <UpdateProfile/>
+      <UpdateProfile loggedUser={loggedUser} setLoggedUser={setLoggedUser}/>
       <ProfileDelete loggedUser={loggedUser} setIsLoggedIn={setIsLoggedIn} setLoggedUser={setLoggedUser}/>
             <div>
             <ProfileDisplay loggedUser={loggedUser}/>
@@ -15,4 +15,4 @@ const ProfileContainer = ({ isLoggedIn, loggedUser, setIsLoggedIn, setLoggedUser
     </div>
   )
 }
-export default ProfileContainer
+export default ProfileContainer;
