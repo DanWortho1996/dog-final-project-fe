@@ -1,8 +1,15 @@
 import ProfileContainer from "../../components/profileContainer/ProfileContainer";
 
-const ProfilePage = () => {
+const ProfilePage = ({ setLoggedUser,loggedUser}) => {
+  console.log(" profile page hit")
   return (
-    <ProfileContainer/>
+    <div>
+      <ProfileContainer
+      setLoggedUser={setLoggedUser}
+      loggedUser={loggedUser}
+      />
+    </div>
+  
   )
 }
 

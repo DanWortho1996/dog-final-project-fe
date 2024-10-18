@@ -50,15 +50,20 @@ export const allUsersFetch = async () => {
     }
 };
 
-export const updateUserFetch = async () => {
+export const updateUserFetch = async (username, newEmail) => {
   const baseURL = import.meta.env.VITE_BASE_URL;
   try{
-    const response = await fetch(`${baseURL}/user/updateuser`, {
+    const response = await fetch(`${baseURL}/users/updateuser`, {
       method: "PUT",
       mode: "cors",
       headers: {
           "Content-Type": "application/json",
       },
+      body: JSON.stringify({
+        username: username,
+        newEmail: newEmail, 
+        
+      }),
   });
   if (!response.ok) {
       console.log("error");

@@ -1,102 +1,68 @@
+import React from 'react'
 import { useState } from 'react';
-import './UpdateProfile.css';
-import { updateUserFetch } from '../../../utils/fetch';  // Utility to send updated data to the backend
+import {updateUserFetch} from "../../../utils/fetch";
 
-const UpdateProfile = ({ isLoggedIn, setIsLoggedIn, loggedUser, setLoggedUser }) => {
-  // Initial state based on the current loggedUser
-  const [formData, setFormData] = useState({
-    username: loggedUser?.username || '',  // Default current username
-    newUserName: '',
-    email: loggedUser?.email || '',  // Default current email
-    newEmail: '',
-  });
 
-  // Handling input changes
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;  // Destructure name and value from event target
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,  // Dynamically set the field being updated
-    }));
+const UpdateProfile = ({ loggedUser, setLoggedUser }) => {
+  console.log("update profile hit")
+ //declare state here called newEmail
+const [newEmail, setNewEmail] = useState("");
+// const [username, setUsername] = useState(loggedUser.username);
+
+  const handleInputChange = (e, setter) => {
+    setter(e.target.value)
+   // add user imput to newEmail
   };
 
-  // Handling form submit
   const handleSubmit = async (e) => {
-    e.preventDefault();
+   e.preventDefault();
+   console.log ("handlesubmit", loggedUser)
 
-    // Update the frontend first (setLoggedUser immediately)
-    const updatedUser = {
-      username: formData.newUserName || formData.username,  // If newUserName is empty, keep the current username
-      email: formData.newEmail || formData.email,  // If newEmail is empty, keep the current email
-    };
+// call updateUserFetch, passing username from loggedUser newEmail as args, and store in veriable data 
+const data = await updateUserFetch (loggedUser.user.username, newEmail);
+console.log("data", data)
 
-    setLoggedUser(updatedUser);  // Immediately update the frontend with new user data
-
-    try {
-      // Send updated data to the backend for persistence
-      const updatedData = await updateUserFetch({
-        username: formData.username,
-        newusername: formData.newUserName,
-        email: formData.email,
-        newemail: formData.newEmail,
-      });
-
-      console.log('Profile updated on the backend', updatedData);
-    } catch (error) {
-      console.error('Error updating profile on the backend:', error);
-    }
+// setLoggedUser to correct value which will be stored in data veriable 
+  setLoggedUser(data)
   };
 
   return (
     <div>
       <h2>Update Profile</h2>
       <form onSubmit={handleSubmit}>
-        <label>
-          Current Username:
-          <input
-            type="text"
-            name="username"
-            value={formData.username}
-            readOnly  // Prevent changes to the current username
-          />
-        </label>
-        <br />
-        <label>
-          New Username:
-          <input
-            type="text"
-            name="newUserName"
-            value={formData.newUserName}
-            onChange={handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Current Email:
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            readOnly  // Prevent changes to the current email
-          />
-        </label>
-        <br />
+       {/* <label>
+        Username (for verification):
+        <input
+        type="text"
+        name="username"
+        value={username}
+       onChange={(e) => handleInputChange(e, setUsername)}
+       required
+        />
+        </label> */}
+
         <label>
           New Email:
           <input
             type="email"
             name="newEmail"
-            value={formData.newEmail}
-            onChange={handleInputChange}
+            value={newEmail}
+            onChange={(e) =>handleInputChange(e, setNewEmail)}
           />
         </label>
-        <br />
-        <button type="submit">Update</button>
+        
+
+  
+        <button type="submit">submit</button>
       </form>
     </div>
   );
 };
 
 export default UpdateProfile;
+
+
+
+
 
 
